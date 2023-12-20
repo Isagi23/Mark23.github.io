@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Home Page</title>
+</head>
+<body>
+
+    <img class="image" src="/styles/profile.jpg">
+    
+    <a href="https://www.facebook.com/markjason.ruelo?mibextid=ZbWKwL" class="fa fa-facebook" target="_blank"></a>
+    <a href="#" class="fa fa-twitter"></a>
+    <a href="www.youtube.com/@jasonruelo8142" class="fa fa-youtube" target="_blank"></a>
+    <div class="container">
+        <nav>
+            <img src="styles/mark.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="blog.html">IT111 BLOG</a></li>
+                <li><a href="flex.html">Flex Page</a></li>
+            </ul>
+            
+        </nav>
+        <div class="header-text">
+            <p>Hi! It's Me</p>
+            <h1><span>Mark</span> Jason Molina Ruelo</h1>
+            <p>I am 19 years old, I came from Zone-5<br>
+             Lower Patag, Alanib, Lantapan, Bukidnon.<br>
+             I am currently enrolled at the Bukidnon State<br>
+             University with the degree of Bachelor Science<br>
+             in Information Technology.
+        </p>
+        <a href="#" class="btn">More About Me</a>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="styles/image1.jpg" class="profile2">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="about">Once again I am Mark, I am the youngest child in our family. We are only two<br>
+                                     siblings and I have an older sister named Hanna Marie M. Ruelo. My father's<br>
+                                     name is Mario C. Ruelo and my mother is Rufina M. Ruelo.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Hobbies')">Hobbies</p>
+                        <p class="tab-links" onclick="opentab('Personal Data')">Personal Data</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>Drawing</li>
+                            <li>Running</li>
+                            <li>Jumping</li>
+                            <li>Coding</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Hobbies">
+                        <ul>
+                            <li>Playing Basketball</li>
+                            <li>Watching TV</li>
+                            <li>Reading Manga</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Personal Data">
+                        <ul>
+                            <li><span>Weight</span><br>64kg</li>
+                            <li><span>Height</span><br>1.80m</li>
+                            <li><span>Blood Type</span><br>AB</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+    <div class="video-clip">
+        <h1>Me 8 years from now</h1>
+        <video src="future self.mp4" width="600px" controls></video>
+        </div>
+</body>
+<footer>
+    Version1.0<br>
+    &copy; MARK JASON M. RUELO 2023<br>
+    Credit Source: CareerOneSpot/fontawesome.come/cdnjs.com/www.istockphoto.com
+</footer>
+</html>
